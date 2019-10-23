@@ -1,0 +1,133 @@
+/* extra resets*/
+/*html {
+    box-sizing: border-box;
+    
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-size: 16px;
+}
+header {
+  height: 80vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: column wrap;
+}
+.logo {
+  text-align: left;
+  padding: 0;
+}
+.text {
+  display: flex;
+
+  color: #c2c2c2;
+}
+.page-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.selector {
+  background-color: white;
+  color: black;
+  width: 20%;
+  display: flex;
+  align-self: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  align-items: center;
+  padding-top: 30%;
+  padding-bottom: 10%;
+}
+.copyrights {
+  color: #c2c2c2;
+}
+
+@media screen and (min-width: 600px) {
+  /* .content { */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* flex-wrap: nowrap; */
+  /* padding: 2rem; */
+  /* align-content: center; */
+  /* } */
+}
+.logo {
+  flex: 0 1 25%;
+  margin: 0 1rem 0 0;
+  text-align: left;
+  padding: 0;
+}
+
+.site-header {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+}
+.page-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector {
+  flex: 1 1 75%;
+  width: fit-content;
+}
+.text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  color: #c2c2c2;
+  width: max-content;
+  height: max-content;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+
+  padding-top: 30%;
+  padding-bottom: 10%;
+}
+.copyrights {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+.container {
+  display: flex;
+
+  padding: 2rem;
+}
