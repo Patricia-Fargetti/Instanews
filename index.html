@@ -7,7 +7,7 @@
 
     <title>Instanews</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./build/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
@@ -27,17 +27,28 @@
          
 
           <div class="selector">
-            <select class="btn">
-              <option value="Sections">Section...</option>
-              <option value="Home">Home</option>
-              <option value="Business">Business</option>
-              <option value="Sports">Sports</option>
-              <option value="Technology">Technology</option>
-              <option value="Fashion">Fashion</option>
-            </select>
+            <form> 
+              <select id="btn">
+                <option value="">Section...</option>
+                <option value="Home">Home</option>
+                <option value="Business">Business</option>
+                <option value="Sports">Sports</option>
+                <option value="Technology">Technology</option>
+                <option value="Fashion">Fashion</option>
+              </select></form>
+           
           </div>
         </div>
       </div>
+      <section class="articles-table">
+         
+           <ul id="story-list">
+            
+           </ul>
+          <!-- <img src="./img/ajax-loader.gif" alt="loading" class="img-loading">  -->
+
+      </section>
+
       <footer>
         <div class="container">
           <div class="footer">
@@ -47,6 +58,6 @@
       </footer>
     </header>
 
-    <script src="./build/js/script.min.js"></script>
+    <script src="build/js/script.min.js"></script>
   </body>
 </html>

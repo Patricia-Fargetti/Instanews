@@ -1,19 +1,35 @@
-$(".btn").on("change", function(event) {
-  const selector = $(event.currentTarget)
-    .find(".selector")
-    .val();
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log("hello");
+  $("#btn").on("change", function(event) {
+    const selector = $(this)
+      .val()
+      .toLowerCase();
+    console.log(selector);
 
-  $.getJSON(
-    "https://api.nytimes.com/svc/topstories/v2/{section}.json?api-key=dhjSMeUrdWCaf0NTHIwDqpEMTZBa3QV4",
+    $.ajax({
+      method: "GET",
+      url: `https://api.nytimes.com/svc/topstories/v2/${selector}.json?api-key=dhjSMeUrdWCaf0NTHIwDqpEMTZBa3QV4`,
+      dataType: "json"
+    }).done(function(nytArticles) {
+      console.log(nytArticles);
+      const results = nytArticles.results;
+      $("#story-list").empty();
 
-    function(data) {
-      console.log(data);
+      $.each(results, function(index, value) {
+        console.log(value);
 
-      console.log(selector);
-      $.each(data.section, function(index, value) {
-        console.log(value, index);
-      });
-    }
-  );
+        const abstract = value.abstract;
+        const img = value.multimedia[4].url;
+
+        $("#story-list").append(
+          `
+          <li class='stories' style='background-image:url(${img});'>
+              ${abstract}
+           
+          </li>
+          `
+        );
+      }); // end of .each
+    }); // end of .done
+  });
 });

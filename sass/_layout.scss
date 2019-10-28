@@ -1,0 +1,10 @@
+#story-list {
+  .stories {
+    min-height: 300px;
+    background-size: cover;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
