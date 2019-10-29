@@ -192,6 +192,69 @@ img {
     width: 100%;
   }
 }
+.loading-gif {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  &.is-active {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.story-text {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  padding: 20px;
+}
+
+.story-list .stories {
+  min-height: 420px;
+  background-size: cover;
+}
+
+.stories {
+  flex: 0 1 100%;
+  max-width: 100%;
+  @include tablet {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+  @include desktop {
+    flex: 0, 1, 25%;
+    max-width: 25%;
+  }
+}
+
+.story-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {
+    display: flex;
+    flex: wrap;
+  }
+  @include desktop {
+    display: flex;
+    flex: wrap;
+  }
+}
+.articles-table .stories {
+  display: block;
+  width: 100%;
+  height: 420px;
+  background-position: 100%;
+  background-size: cover;
+  @include tablet {
+    background-position: 50%;
+  }
+  @include desktop {
+    background-position: 100%;
+  }
+}
 
 @media screen and (min-width: 600px) {
   //   .content {
