@@ -24,12 +24,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           const abstract = value.abstract;
           const img = value.multimedia[4].url;
-
+          const link = value.url;
+          console.log(value.url);
           $("#story-list").append(
-            `
+            ` <a class = 'nysite' href= ${link}>
           <li class='stories' style='background-image:url(${img});'>
-            <p class='story-text'>  ${abstract}</p>
-           
+          
+                   <p class='story-text'>  ${abstract}               
+                   </p>
+          
+          </a>
           </li>
           `
           );
