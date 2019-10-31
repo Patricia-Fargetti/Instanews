@@ -59,6 +59,35 @@ img {
     justify-content: flex-end;
   }
 }
+.after-header {
+  height: auto;
+  justify-content: flex-start;
+  padding: 0px 20px 15px 30px;
+  font-size: 14px;
+  margin: 10px 20px 10px -10px;
+  .logo {
+    width: 100px;
+    margin: 5px;
+    flex-grow: 0;
+    flex-basis: 70px;
+  }
+  .page-items {
+    margin: 0 0vh 10px 40px;
+    padding: 0px 0px 20px 0px;
+  }
+  .btn {
+    background-color: $primary-color;
+    color: $primary-color;
+    border-color: $primary-color;
+    //!important;
+  }
+  form {
+    background: $primary-color;
+  }
+  &focus {
+    outline: 0.5px solid orange;
+  }
+}
 .logo {
   text-align: left;
   padding: 0;
@@ -243,6 +272,7 @@ a {
   background-size: cover;
   @include tablet {
   }
+  background-position: 50%;
   @include desktop {
   }
 }

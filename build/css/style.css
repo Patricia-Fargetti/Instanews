@@ -95,6 +95,31 @@ img {
       -webkit-box-pack: start;
       justify-content: flex-end; } }
 
+.after-header {
+  height: auto;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  padding: 0px 20px 15px 30px;
+  font-size: 14px;
+  margin: 10px 20px 10px -10px; }
+  .after-header .logo {
+    width: 100px;
+    margin: 5px;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
+    flex-basis: 70px; }
+  .after-header .page-items {
+    margin: 0 0vh 10px 40px;
+    padding: 0px 0px 20px 0px; }
+  .after-header .btn {
+    background-color: black;
+    color: black;
+    border-color: black; }
+  .after-header form {
+    background: black; }
+  .after-headerfocus {
+    outline: 0.5px solid orange; }
+
 .logo {
   text-align: left;
   padding: 0;
@@ -290,4 +315,5 @@ a {
   width: 100%;
   height: 420px;
   background-position: 100%;
-  background-size: cover; }
+  background-size: cover;
+  background-position: 50%; }

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // display loading gif
     $("#loading-gif").addClass("is-active");
+    $("#site-header").addClass("after-header");
     // $("#selector").addClass("transition");
     $.ajax({
       method: "GET",
@@ -50,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .always(function() {
         // console.log("always has run");
         $("#loading-gif").removeClass("is-active");
-        // $("#selector").removeClass("transition");
       }); // end of .done
   });
 });
