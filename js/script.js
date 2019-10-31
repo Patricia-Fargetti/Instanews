@@ -16,7 +16,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
       .done(function(nytArticles) {
         console.log(nytArticles);
-        const results = nytArticles.results.slice(0, 12);
+        const results = nytArticles.results
+          .filter(function(article) {
+            return article.multimedia[4] !== undefined;
+          })
+          .slice(0, 12);
         $("#story-list").empty();
 
         $.each(results, function(index, value) {
@@ -26,17 +30,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
           const img = value.multimedia[4].url;
           const link = value.url;
           console.log(value.url);
-          $("#story-list").append(
-            ` <a class = 'nysite' href= ${link}>
+          $("#story-list").append(`  
           <li class='stories' style='background-image:url(${img});'>
+            <a class='nysite' href= ${link}>
+               
           
-                   <p class='story-text'>  ${abstract}               
-                   </p>
-          
-          </a>
-          </li>
-          `
-          );
+                   <p class='story-text'>  ${abstract} </p>
+
+            </a>
+        </li>
+               
+           
+          `);
         }); // end of .each
       })
       .fail(function() {

@@ -14,7 +14,8 @@
 body {
   background: $primary-color;
   color: $secondary-color;
-  font-size: 16px;
+
+  font: normal 16px $font;
 }
 header {
   display: flex;
@@ -70,7 +71,6 @@ img {
     flex-wrap: wrap;
   }
   @include desktop {
-    padding-top: 40vh;
     display: -webkit-box;
 
     -webkit-box-orient: horizontal;
@@ -103,14 +103,14 @@ img {
 }
 .text {
   display: flex;
-  color: #c2c2c2;
+  color: $secondary-color;
   @include desktop {
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    color: #c2c2c2;
+    color: $secondary-color;
     width: max-content;
     height: max-content;
   }
@@ -171,6 +171,7 @@ img {
     display: flex;
 
     justify-items: flex-start;
+    padding: 5rem 2rem;
   }
 }
 
@@ -218,41 +219,47 @@ img {
 }
 
 .stories {
-  flex: 0 1 100%;
-  max-width: 100%;
+  position: relative;
   @include tablet {
-    flex: 0 1 50%;
-    max-width: 50%;
   }
   @include desktop {
-    flex: 0, 1, 25%;
-    max-width: 25%;
   }
 }
 
-.story-list {
-  display: flex;
-  flex-wrap: wrap;
-  @include tablet {
-    display: flex;
-    flex: wrap;
-  }
-  @include desktop {
-    display: flex;
-    flex: wrap;
+// .nysite {
+//   position: absolute;
+//   bottom: 0;
+// }
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+  line-height: 1.5rem;
+
+  .story-text {
+    color: $secondary-color;
+    text-decoration: none;
   }
 }
+.story-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .articles-table .stories {
-  display: block;
   width: 100%;
   height: 420px;
   background-position: 100%;
   background-size: cover;
   @include tablet {
-    background-position: 50%;
   }
   @include desktop {
-    background-position: 100%;
   }
 }
 
@@ -335,16 +342,6 @@ img {
   //     padding: 0;
   //   }
 
-  .site-header {
-    padding-top: 40vh;
-    display: -webkit-box;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-pack: start;
-    justify-content: flex-end;
-  }
   //   .page-items {
   //     display: -webkit-box;
 
