@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .toLowerCase();
     console.log(selector);
 
-    // diplay loading gif
+    // display loading gif
     $("#loading-gif").addClass("is-active");
-
+    // $("#selector").addClass("transition");
     $.ajax({
       method: "GET",
       url: `https://api.nytimes.com/svc/topstories/v2/${selector}.json?api-key=dhjSMeUrdWCaf0NTHIwDqpEMTZBa3QV4`,
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .always(function() {
         // console.log("always has run");
         $("#loading-gif").removeClass("is-active");
+        // $("#selector").removeClass("transition");
       }); // end of .done
   });
 });

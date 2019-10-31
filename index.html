@@ -11,54 +11,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="content">
-        <div class="site-header">
-          <div class="logo">
-            <img src="./img/nyt-logo.svg " />
-          </div>
-          <br />
-          <br />
-          <div class="page-items">
-            <div class="text">
-              <p>Choose a section:</p>
-            </div>
-          
-         
+    <div class="main">
+      <header class="site-header">
+        <div class="logo">
+          <img src="./img/nyt-logo.svg " />
+        </div>
 
-          <div class="selector">
-            <form> 
-              <select id="btn">
+        <div class="page-items">
+          <div class="text">
+            <p>Choose a section:</p>
+          </div>
+
+          <div id="selector" class="selector">
+            <form>
+              <select class="btn" id="btn">
                 <option value="">Section...</option>
                 <option value="Home">Home</option>
                 <option value="Business">Business</option>
                 <option value="Sports">Sports</option>
                 <option value="Technology">Technology</option>
                 <option value="Fashion">Fashion</option>
-              </select></form>
-          
+              </select>
+            </form>
           </div>
         </div>
       </header>
       <section class="articles-table">
-         
-           <ul id="story-list" class="story-list">
-            
-           </ul>
-   
+        <ul id="story-list" class="story-list"></ul>
       </section>
-    
+
       <footer>
-        <div class="container">
-          <div class="footer">
-            <p class="copyrights">© Copyright 2016 INSTANEWS</p>
-          </div>
+        <div class="footer">
+          <p class="copyrights">© Copyright 2016 INSTANEWS</p>
         </div>
       </footer>
-   
     </div>
-
-    <img  src="./img/ajax-loader.gif" alt="loading" class="loading-gif" id="loading-gif">  
+    <img
+      src="./img/ajax-loader.gif"
+      alt="loading"
+      class="loading-gif"
+      id="loading-gif"
+    />
 
     <script src="build/js/script.min.js"></script>
   </body>
