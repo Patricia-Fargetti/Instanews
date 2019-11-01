@@ -269,9 +269,10 @@ a {
   text-decoration: none;
   color: $secondary-color;
   line-height: 1.5rem;
-  position: absolute;
-  bottom: 0;
   .story-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     color: $secondary-color;
     text-decoration: none;
   }
@@ -302,8 +303,8 @@ a {
   padding-bottom: 50px;
 }
 .position.page-items {
-  transform: translateY(-5px);
-  //transform: translateX(-15px);
+  transform: translateY(20px);
+
   @include tablet {
     transform: translateX(50px);
   }
@@ -313,7 +314,7 @@ a {
 }
 
 .position.logo {
-  transform: translateY(50px);
+  transform: translateY(25px);
 
   @include tablet {
     transform: translateX(50px);

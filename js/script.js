@@ -33,12 +33,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
           const link = value.url;
           console.log(value.url);
           $("#story-list").append(`  
-          <li class='stories' style='background-image:url(${img});'>
+          <li class='stories'>
             <a class='nysite' href= ${link}>
-               
-          
-                   <p class='story-text'>  ${abstract} </p>
-
+              <div class='stories' style='background-image:url(${img});'>
+                <p class='story-text'>  ${abstract} </p>
+              </div>
             </a>
         </li>
                

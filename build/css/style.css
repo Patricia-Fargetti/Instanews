@@ -309,10 +309,11 @@ img {
 a {
   text-decoration: none;
   color: white;
-  line-height: 1.5rem;
-  position: absolute;
-  bottom: 0; }
+  line-height: 1.5rem; }
   a .story-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     color: white;
     text-decoration: none; }
 
@@ -337,8 +338,8 @@ a {
   padding-bottom: 50px; }
 
 .position.page-items {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px); }
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px); }
   @media (min-width: 600px) {
     .position.page-items {
       -webkit-transform: translateX(50px);
@@ -349,8 +350,8 @@ a {
               transform: translateX(50px); } }
 
 .position.logo {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px); }
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px); }
   @media (min-width: 600px) {
     .position.logo {
       -webkit-transform: translateX(50px);
