@@ -1,12 +1,18 @@
-* {
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
   box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   background: $primary-color;
   color: $secondary-color;
-
   font: normal 16px $font;
+  height: 100vh;
 }
 
 .main {
@@ -36,6 +42,7 @@ img {
   padding: 2rem;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 
   @include tablet {
     display: flex;
@@ -43,9 +50,8 @@ img {
     align-items: center;
     align-content: center;
     flex-direction: row;
-
     width: 100%;
-    padding: 2rem;
+    padding: 4rem;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -62,11 +68,11 @@ img {
 .after-header {
   height: auto;
   justify-content: flex-start;
-  padding: 0px 20px 15px 30px;
+  padding: 20px 20px 20px 30px;
   font-size: 14px;
   margin: 10px 20px 10px -10px;
   .logo {
-    width: 100px;
+    width: 150px;
     margin: 5px;
     flex-grow: 0;
     flex-basis: 70px;
@@ -79,6 +85,7 @@ img {
     background-color: $primary-color;
     color: $primary-color;
     border-color: $primary-color;
+    width: 120px;
   }
   form {
     background: $primary-color;
@@ -91,8 +98,13 @@ img {
 .logo {
   text-align: left;
   padding: 0;
-  margin: 0 4rem;
+  margin: 0 2rem;
   flex-direction: column;
+  transition: all 2s ease;
+  img {
+    transition: all 2s ease;
+  }
+
   @include tablet {
     flex: 0 1 25%;
 
@@ -101,7 +113,7 @@ img {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 20vh 0vh 0vh -15vh;
+    margin: 2rem;
   }
   @include desktop {
     flex: 0 1 25%;
@@ -113,6 +125,11 @@ img {
 .text {
   display: flex;
   color: $secondary-color;
+  p {
+    padding-top: 30px;
+  }
+  @include tablet {
+  }
   @include desktop {
     text-align: left;
     display: flex;
@@ -124,16 +141,18 @@ img {
     height: max-content;
   }
 }
+// .position {
+//   transition: translate 1s;
+// }
 .page-items {
   display: block;
-  margin: 1.5rem auto;
+
   @include tablet {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     align-content: center;
-    margin: 20vh 0vh 0px 0px;
   }
   @include desktop {
     display: -webkit-box;
@@ -154,7 +173,7 @@ img {
   color: $primary-color;
   display: flex;
   align-self: center;
-  margin: 10px;
+
   @include desktop {
     flex: 1 1 75%;
     width: fit-content;
@@ -169,15 +188,11 @@ img {
   flex-direction: column;
   justify-items: flex-end;
   align-items: center;
-  padding-top: 30%;
-  padding-bottom: 10%;
+
   @include tablet {
     display: flex;
-
     justify-items: center;
-    padding-top: 1%;
-    padding-bottom: 10%;
-    margin: 50px 0px;
+    margin-bottom: 2rem;
   }
   @include desktop {
     display: flex;
@@ -190,7 +205,7 @@ img {
     margin: 0;
     padding-bottom: 0;
     flex-basis: 0;
-    margin-bottom: 0;
+    margin: 0px 0px 50px 30px;
   }
 }
 
@@ -281,5 +296,29 @@ a {
   }
   background-position: 50%;
   @include desktop {
+  }
+}
+.articles-table {
+  padding-bottom: 50px;
+}
+.position.page-items {
+  transform: translateY(-5px);
+  //transform: translateX(-15px);
+  @include tablet {
+    transform: translateX(50px);
+  }
+  @include desktop {
+    transform: translateX(50px);
+  }
+}
+
+.position.logo {
+  transform: translateY(50px);
+
+  @include tablet {
+    transform: translateX(50px);
+  }
+  @include desktop {
+    transform: translateX(0px);
   }
 }
