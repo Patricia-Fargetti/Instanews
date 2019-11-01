@@ -165,8 +165,6 @@ img {
   display: -webkit-box;
   display: flex;
   color: white; }
-  .text p {
-    padding-top: 30px; }
   @media (min-width: 1000px) {
     .text {
       text-align: left;
@@ -350,8 +348,8 @@ a {
               transform: translateX(50px); } }
 
 .position.logo {
-  -webkit-transform: translateY(25px);
-          transform: translateY(25px); }
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px); }
   @media (min-width: 600px) {
     .position.logo {
       -webkit-transform: translateX(50px);

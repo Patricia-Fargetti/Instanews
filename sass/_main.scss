@@ -125,9 +125,7 @@ img {
 .text {
   display: flex;
   color: $secondary-color;
-  p {
-    padding-top: 30px;
-  }
+
   @include tablet {
   }
   @include desktop {
@@ -141,9 +139,7 @@ img {
     height: max-content;
   }
 }
-// .position {
-//   transition: translate 1s;
-// }
+
 .page-items {
   display: block;
 
@@ -260,11 +256,6 @@ img {
   }
 }
 
-// .nysite {
-//   position: absolute;
-//   bottom: 0;
-// }
-
 a {
   text-decoration: none;
   color: $secondary-color;
@@ -314,7 +305,7 @@ a {
 }
 
 .position.logo {
-  transform: translateY(25px);
+  transform: translateY(12px);
 
   @include tablet {
     transform: translateX(50px);
