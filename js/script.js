@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // display loading gif
     $("#loading-gif").addClass("is-active");
     $("#site-header").addClass("after-header");
+    $("#footer").addClass("after-footer");
     // $("#selector").addClass("transition");
     $.ajax({
       method: "GET",

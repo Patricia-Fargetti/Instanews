@@ -241,6 +241,12 @@ img {
       display: flex;
       justify-items: flex-start;
       padding: 5rem 2rem; } }
+  .footer.after-footer {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0;
+    flex-basis: 0;
+    margin-bottom: 0; }
 
 .copyrights {
   color: #c2c2c2; }
