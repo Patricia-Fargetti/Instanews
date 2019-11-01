@@ -82,13 +82,17 @@ img {
     padding: 0px 0px 20px 0px;
   }
   .btn {
-    background-color: $primary-color;
+    background: $primary-color;
     color: $primary-color;
     border-color: $primary-color;
     width: 120px;
+    @include desktop {
+      background: $secondary-color;
+    }
   }
   form {
     background: $primary-color;
+    height: 50px;
   }
   &focus {
     outline: 0.5px solid orange;
@@ -165,7 +169,6 @@ img {
   }
 }
 .selector {
-  background-color: $secondary-color;
   color: $primary-color;
   display: flex;
   align-self: center;
@@ -177,6 +180,10 @@ img {
   &.transition {
     background-color: $primary-color;
   }
+}
+
+.btn {
+  background-color: $secondary-color;
 }
 
 .footer {

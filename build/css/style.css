@@ -120,12 +120,16 @@ img {
     margin: 0 0vh 10px 40px;
     padding: 0px 0px 20px 0px; }
   .after-header .btn {
-    background-color: black;
+    background: black;
     color: black;
     border-color: black;
     width: 120px; }
+    @media (min-width: 1000px) {
+      .after-header .btn {
+        background: white; } }
   .after-header form {
-    background: black; }
+    background: black;
+    height: 50px; }
   .after-headerfocus {
     outline: 0.5px solid orange; }
 
@@ -212,7 +216,6 @@ img {
       margin: 0px; } }
 
 .selector {
-  background-color: white;
   color: black;
   display: -webkit-box;
   display: flex;
@@ -226,6 +229,9 @@ img {
       width: fit-content; } }
   .selector.transition {
     background-color: black; }
+
+.btn {
+  background-color: white; }
 
 .footer {
   display: -webkit-box;
