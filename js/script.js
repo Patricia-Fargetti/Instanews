@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log("something did not work?");
       })
       .always(function() {
-        // console.log("always has run");
+        //console.log("always has run");
         $("#loading-gif").removeClass("is-active");
       }); // end of .done
   });
